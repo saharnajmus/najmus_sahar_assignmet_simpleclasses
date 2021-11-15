@@ -2,8 +2,7 @@ package be.intecbrussel;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+
 
 public class LocalDateTimeApp {
     public static void main(String[] args) {
