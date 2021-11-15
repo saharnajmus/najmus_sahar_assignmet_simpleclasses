@@ -9,7 +9,15 @@ public class MonthDayApp {
         //Assignment 3:Weekdays and Months
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Enter a day of the week from 1(Monday) to 7(Sunday)");
+        if (!keyboard.hasNextInt()) {
+            System.out.println("Input is not a number, program exits");
+            return;
+        }
         int day = keyboard.nextInt();
+        if (day < 1 || day > 7) {
+            System.out.println("You have entered invalid input");
+            return;
+        }
         DayOfWeek dayOfWeek = DayOfWeek.of(day);
         System.out.format("%s %n", dayOfWeek);
         DayOfWeek addMoreDays = dayOfWeek.plus(10);
@@ -17,14 +25,19 @@ public class MonthDayApp {
         System.out.println("After adding 10 days " + addMoreDays);
         System.out.println("After subtracting 5 days " + subtractDays);
 
-        System.out.println("Enter a month of the year from 1(january) to 12(december)");
+     /*   System.out.println("Enter a month of the year from 1(january) to 12(december)");
         int monthOfYear = keyboard.nextInt();
-        Month month = Month.of(monthOfYear);
+        if (monthOfYear< 1 || monthOfYear> 12) {
+            System.out.println("You have entered invalid input");
+            return;
+        }
+
+        Month month= Month.of(monthOfYear);
         System.out.format("%s %n", month);
         Month addMonths = month.plus(10);
         Month subtractMonths = month.minus(5);
         System.out.println("After adding 10 months" + addMonths);
-        System.out.println("After subtracting 5 months " + subtractMonths);
+        System.out.println("After subtracting 5 months " + subtractMonths);*/
 
 
         //Chapter 12 Example

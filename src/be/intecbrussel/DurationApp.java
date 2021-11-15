@@ -10,8 +10,8 @@ public class DurationApp {
     public static void main(String[] args) {
         //Chapter 12 : Assignment 6 : Duration:
         LocalDate nowDate = LocalDate.now();
-        LocalDate myBirthDate = LocalDate.of(1991, 5, 14);
-        Period period = Period.between(nowDate, myBirthDate);
+        LocalDate myBirthDate = LocalDate.of(2017, 8, 31);
+        Period period = Period.between(myBirthDate,nowDate);
 
         System.out.println("Number of days: " + period.getDays());
         System.out.println("Number of months: " + period.getMonths());
@@ -20,7 +20,7 @@ public class DurationApp {
         long days = ChronoUnit.DAYS.between(myBirthDate, nowDate);
         long weeks = ChronoUnit.WEEKS.between(myBirthDate, nowDate);
         long months = ChronoUnit.MONTHS.between(myBirthDate, nowDate);
-        ;
+
 
         System.out.println("Total number of days between myBirth and now: " + days);
         System.out.println("Total number of weeks:  " + weeks);

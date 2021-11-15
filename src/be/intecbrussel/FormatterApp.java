@@ -14,9 +14,9 @@ public class FormatterApp {
         DateTimeFormatter inputFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-        LocalDate otherDay2 = LocalDate.parse(userInput, inputFormat);
+        LocalDate userDate = LocalDate.parse(userInput, inputFormat);
 
-        String format = otherDay2.format(outputFormat);
+        String format = userDate.format(outputFormat);
         System.out.println(format);
 
     }

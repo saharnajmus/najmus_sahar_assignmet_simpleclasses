@@ -8,18 +8,21 @@ import java.time.LocalTime;
 public class LocalDateTimeApp {
     public static void main(String[] args) {
         //Chapter 12: Assignment 4: Local dates and times
-        LocalDate myDateOfBirth = LocalDate.of(1991, 5, 14);
-        int myBirthDayInYear = myDateOfBirth.getDayOfYear();
-        int myBirthDayInMonth = myDateOfBirth.getDayOfMonth();
-        DayOfWeek myBirthDayInWeek = myDateOfBirth.getDayOfWeek();
-        System.out.println("My birthday was the " + myBirthDayInYear + "th day of the year ");
-        System.out.println("My birthday was the " + myBirthDayInMonth + "th day of the month");
-        System.out.println("I was born on  " + myBirthDayInWeek);
+        LocalDate myDateOfBirth = LocalDate.of(2015, 1, 30);
+
+        int dayOfYear = myDateOfBirth.getDayOfYear();
+        int dayOfMonth = myDateOfBirth.getDayOfMonth();
+        DayOfWeek dayOfWeek = myDateOfBirth.getDayOfWeek();
+
+        System.out.println("My birthday was the " + dayOfYear + "th day of the year ");
+        System.out.println("My birthday was the " + dayOfMonth + "th day of the month");
+        System.out.println("I was born on  " + dayOfWeek);
+
         int year = myDateOfBirth.getYear();
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-            System.out.println("your birthday year was a leap year");
+        if (myDateOfBirth.isLeapYear()) {
+            System.out.println("It was a leap year");
         } else {
-            System.out.println("your birthday year was not a leap year");
+            System.out.println("It was not a leap year");
 
         }
 
